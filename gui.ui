@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>767</width>
+    <height>660</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout" rowstretch="1,1,0,2" columnstretch="2,2,1">
+    <item row="0" column="0" colspan="3">
+     <widget class="QFrame" name="frame">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="untref">
+       <property name="geometry">
+        <rect>
+         <x>-10</x>
+         <y>-10</y>
+         <width>171</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../UNTREF_Logo_2016.svg.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="title">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>0</y>
+         <width>221</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Manipulación de señales</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="t_i">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>-2</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="t">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>20</y>
+         <width>31</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt; t &lt;</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="t_s">
+       <property name="geometry">
+        <rect>
+         <x>450</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="fs">
+       <property name="geometry">
+        <rect>
+         <x>560</x>
+         <y>20</y>
+         <width>61</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>1000</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="fsLabel">
+       <property name="geometry">
+        <rect>
+         <x>490</x>
+         <y>20</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>F. Muestreo</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QGroupBox" name="manipulacion">
+      <property name="title">
+       <string>Manipulación</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_8">
+       <item row="6" column="0">
+        <widget class="QLineEdit" name="desp">
+         <property name="text">
+          <string>1</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0" rowspan="2" colspan="2">
+        <widget class="QLabel" name="desp_label">
+         <property name="text">
+          <string>Desplazamiento [s]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QCheckBox" name="giro">
+         <property name="text">
+          <string>Giro</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QRadioButton" name="giro_desp">
+         <property name="text">
+          <string>Giro-Desp</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QRadioButton" name="desp_giro">
+         <property name="text">
+          <string>Desp-Giro</string>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="3">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Señal 1</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="MplWidget" name="mpl_s1" native="true"/>
+        </item>
+        <item row="0" column="1">
+         <widget class="MplWidget" name="mpl_s1m" native="true"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Señal 2</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <widget class="MplWidget" name="mpl_s2" native="true"/>
+        </item>
+        <item row="0" column="1">
+         <widget class="MplWidget" name="mpl_s2m" native="true"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>FFT</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="0" column="0">
+         <widget class="MplWidget" name="mpl_fft1" native="true"/>
+        </item>
+        <item row="0" column="1">
+         <widget class="MplWidget" name="mpl_fft2" native="true"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>Convolución</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="0" column="2">
+         <widget class="MplWidget" name="mpl_convo" native="true"/>
+        </item>
+        <item row="0" column="1">
+         <widget class="MplWidget" name="mpl_both" native="true"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QPushButton" name="process">
+      <property name="text">
+       <string>Procesar</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1" rowspan="2">
+     <widget class="QGroupBox" name="senial2">
+      <property name="title">
+       <string>Señal 2</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0" colspan="3">
+        <widget class="QComboBox" name="s2_type">
+         <item>
+          <property name="text">
+           <string>Sinusoide</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Cuadrada</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Sawtooth</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Sinc</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Pulso rectangular</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Pulso triangular</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Escalón</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Signo</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Exponencial decreciente</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Exponencial bilateral</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="amplitudS2">
+         <property name="text">
+          <string>Amplitud</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLabel" name="periodoS2">
+         <property name="text">
+          <string>Período</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLineEdit" name="amp_s2">
+         <property name="text">
+          <string>2</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QLineEdit" name="per_s2">
+         <property name="text">
+          <string>1</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="dutyS2">
+         <property name="text">
+          <string>Duty</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QLabel" name="widthS2">
+         <property name="text">
+          <string>Width</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLineEdit" name="duty_s2">
+         <property name="text">
+          <string>50</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2">
+        <widget class="QLineEdit" name="width_s2">
+         <property name="text">
+          <string>0.5</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="primer_s2">
+         <property name="text">
+          <string>0.1</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLabel" name="primerS2">
+         <property name="text">
+          <string>Primer</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="0" rowspan="2">
+     <widget class="QGroupBox" name="senial1">
+      <property name="title">
+       <string>Señal 1</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2" rowstretch="1,0,1,0,1">
+       <item row="1" column="2">
+        <widget class="QLabel" name="periodoS1">
+         <property name="text">
+          <string>Período [s]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QLabel" name="widthS1">
+         <property name="text">
+          <string>Width</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="3">
+        <widget class="QComboBox" name="s1_type">
+         <item>
+          <property name="text">
+           <string>Sinusoide</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Cuadrada</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Sawtooth</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Sinc</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Pulso rectangular</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Pulso triangular</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Escalón</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Signo</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Exponencial decreciente</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Exponencial bilateral</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QLineEdit" name="per_s1">
+         <property name="text">
+          <string>1</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLineEdit" name="duty_s1">
+         <property name="text">
+          <string>50</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2">
+        <widget class="QLineEdit" name="width_s1">
+         <property name="text">
+          <string>0.5</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLineEdit" name="amp_s1">
+         <property name="text">
+          <string>2</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="dutyS1">
+         <property name="text">
+          <string>Duty [%]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="amplitudS1">
+         <property name="text">
+          <string>Amplitud</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="s1_primer">
+         <property name="text">
+          <string>0.1</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLabel" name="primerS1">
+         <property name="text">
+          <string>Primer</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MplWidget</class>
+   <extends>QWidget</extends>
+   <header>mplwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
